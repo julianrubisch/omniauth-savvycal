@@ -1,8 +1,6 @@
 # Omniauth::Savvycal
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/omniauth/savvycal`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides an OmniAuth strategy for authenticating with [SavvyCal](https://www.savvycal.com)
 
 ## Installation
 
@@ -20,9 +18,34 @@ Or install it yourself as:
 
     $ gem install omniauth-savvycal
 
-## Usage
+## Basic Usage
 
-TODO: Write usage instructions here
+```ruby
+use OmniAuth::Builder do
+  provider :savvycal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
+end
+```
+
+
+## Basic Usage Rails
+
+In `config/initializers/savvycal.rb`
+
+```ruby
+  Rails.application.config.middleware.use OmniAuth::Builder do
+    provider :savvycal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
+  end
+```
+
+### With Devise
+
+In `config/initializers/devise.rb`
+
+```ruby
+  config.omniauth :savvycal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
+  
+```
+
 
 ## Development
 
@@ -32,7 +55,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/julianrubisch/omniauth-savvycal.
+Bug reports and pull requests are welcome on Savvycal at https://savvycal.com/julianrubisch/omniauth-savvycal.
 
 ## License
 
