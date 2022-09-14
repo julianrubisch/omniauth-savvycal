@@ -3,7 +3,7 @@ require "omniauth-oauth2"
 module OmniAuth
   module Strategies
     class SavvyCal < OmniAuth::Strategies::OAuth2
-      option :name, "savvycal"
+      option :name, "savvy_cal"
       option :client_options, {
         site: "https://api.savvycal.com/v1",
         authorize_url: "https://savvycal.com/oauth/authorize",
