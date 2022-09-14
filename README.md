@@ -22,18 +22,18 @@ Or install it yourself as:
 
 ```ruby
 use OmniAuth::Builder do
-  provider :savvycal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
+  provider :savvy_cal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
 end
 ```
 
 
 ## Basic Usage Rails
 
-In `config/initializers/savvycal.rb`
+In `config/initializers/savvy_cal.rb`
 
 ```ruby
   Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :savvycal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
+    provider :savvy_cal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
   end
 ```
 
@@ -42,7 +42,7 @@ In `config/initializers/savvycal.rb`
 In `config/initializers/devise.rb`
 
 ```ruby
-  config.omniauth :savvycal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
+  config.omniauth :savvy_cal, ENV['SAVVYCAL_KEY'], ENV['SAVVYCAL_SECRET']
   
 ```
 
